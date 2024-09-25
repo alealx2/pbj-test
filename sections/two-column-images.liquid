@@ -14,7 +14,7 @@
           {{ 'image' | placeholder_svg_tag }}          
         {% endif %}
       </div>
-      <div class="custom-column {% if section.settings.layout == 'row' %}half{% endif %}" style="background-color: {{ section.settings.text_column_bg_color }};">
+      <div class="custom-column">
         {% if section.settings.secondary_image != blank %}
             <img 
                 src="{{ section.settings.secondary_image | image_url }}" 
@@ -70,12 +70,6 @@
           "label": "Column"
         }
       ]
-    },
-    {
-      "type": "color",
-      "id": "text_column_bg_color",
-      "label": "Background Color for Text Column",
-      "default": "#ffffff"
     }
   ],
   "presets": [
