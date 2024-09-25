@@ -104,10 +104,37 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "two_column_images_yD3xnC": {
+      "type": "two-column-images",
+      "settings": {
+        "main_image": "shopify://shop_images/sportyimgbanner.jpg",
+        "main_image_alt": "Sport sweater",
+        "secondary_image": "shopify://shop_images/models_4_-min.jpg",
+        "secondary_image_alt": "Blue sweater model",
+        "layout": "row",
+        "text_column_bg_color": "#ffffff"
+      }
+    },
+    "two_column_image_content_xfrKPp": {
+      "type": "two-column-image-content",
+      "settings": {
+        "icon_image": "shopify://shop_images/social_1.png",
+        "icon_image_alt": "We love clothing",
+        "title": "We love clothing",
+        "subtitle": "100% natural materials for nice looking street wear clothe",
+        "description": "The craft of naturally dyed textile production and pesticide-free cotton cultivation goes back thousands of years, with strong roots in the Indian subcontinent. The origins of vegetable dyeing in India can be traced to the Indus Valley around the 4th millenium B.C. Thousands of years later, the synthesis of petroleum-based dyes proliferated in the 1870’s, bringing an end to widespread use of natural processes. Shortsightedly convenient and inexpensive GMO & pesticide heavy cotton, petroleum-based dyes, and exploited garment manufacturing labor, has largely replaced the sustainable craft of milled organic cotton, colored with natural dyes, cut and sewn into finished garments with integrity. This shift has spoiled the natural world for more than a century, causing drastic consequences to garment workers and our environment. Through the Clean Clothes project, we aim to create dialogue and research for two primary goals: 1) to respect and advocate for the usage of pesticide-free, non-GMO organic cotton; and 2) if dyeing is necessary, to use only 100% natural dyes. By issuing constraints on dyeing and washing processes, not only can we assure Clean Clothes on our skin, but cleaner rivers, oceans, soil, and air for everyone.",
+        "large_image": "shopify://shop_images/models_2_-min.jpg",
+        "large_image_alt": "Caps",
+        "layout": "row",
+        "orientation": "normal"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "two_column_images_yD3xnC",
+    "two_column_image_content_xfrKPp"
   ]
 }
