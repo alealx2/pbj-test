@@ -2,6 +2,12 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'section-related-products.css' | asset_url | stylesheet_tag }}
 
+{% assign sliderSection = false %}
+{% if section.settings.slider_type == 'yes' %}   
+{% assign sliderSection = true %}
+{%- endif -%}
+
+
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
@@ -29,29 +35,137 @@
       <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
         {{ section.settings.heading }}
       </h2>
-      <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-        role="list"
-      >
-        {% for recommendation in recommendations.products %}
-          <li class="grid__item">
-            {% render 'card-product',
-              card_product: recommendation,
-              media_aspect_ratio: section.settings.image_ratio,
-              image_shape: section.settings.image_shape,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating
-            %}
-          </li>
-        {% endfor %}
-      </ul>
+      
+      <div class="{% if sliderSection %}slider-wrapper {% endif %}">     
+        {% if sliderSection %}   
+          <button class="slider-btn prev-btn" aria-label="Previous Slide">‹</button>
+        {% endif %}
+        <div class="{% if sliderSection %}slider-container {% endif %}">
+            <ul
+              class="{% if sliderSection %}slider {% else %} grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down {% endif %}"
+              role="list"
+            >            
+            {% for recommendation in recommendations.products %}
+              <li class="{% if sliderSection %}slider-item {% endif %}grid__item">
+                {% render 'card-product',
+                  card_product: recommendation,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  image_shape: section.settings.image_shape,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating
+                %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>    
+        {% unless section.settings.slider_type == 'no' %}   
+          <button class="slider-btn next-btn" aria-label="Next Slide">›</button>
+        {% endunless %}
+      </div>
     {% endif %}
   </product-recommendations>
+  
   {% if section.settings.image_shape == 'arch' %}
     {% render 'mask-arch' %}
   {%- endif -%}
 </div>
+
+<style>
+  .slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider-container {
+    overflow: hidden;
+    scroll-behavior: smooth; 
+    width: 100%;
+  }
+  
+  .slider {
+    display: flex;
+    gap: 20px;
+    scroll-behavior: smooth;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slider-item {
+    flex: 0 0 calc(100% / 4);
+    transition: transform 0.3s ease;    
+  }
+  
+  @media (max-width: 1024px) {
+    .slider-item {
+      flex: 0 0 calc(100% / 2); 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .slider-item {
+      flex: 0 0 100%;
+    }
+  }
+  
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #262626;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px 20px;  
+  }
+  
+  .prev-btn {
+    left: -15px;
+  }
+  
+  .next-btn {
+    right: -15px;
+  }
+  
+</style>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+
+    setTimeout(function(){
+        
+    const sliderContainer = document.querySelector('.slider-container');
+    const slider = document.querySelector('.slider');
+    const sliderItems = document.querySelectorAll('.slider-item');
+  
+    console.log(sliderItems)
+    if (sliderItems.length > 0) {
+      const itemWidth = sliderItems[0].offsetWidth; 
+  
+      const nextBtn = document.querySelector('.next-btn');
+      const prevBtn = document.querySelector('.prev-btn');
+  
+      nextBtn.addEventListener('click', function() {
+        sliderContainer.scrollLeft += itemWidth * 1.5; 
+      });
+  
+      prevBtn.addEventListener('click', function() {
+        sliderContainer.scrollLeft -= itemWidth * 1.5; 
+      });
+    } else {
+      console.error('No slider items found.');
+    }
+  }, 1000);
+    
+  });
+    
+</script>
 
 {% schema %}
 {
@@ -89,6 +203,22 @@
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
     },
+    {
+      "type": "select",
+      "id": "slider_type",
+      "options": [
+        {
+          "value": "no",
+          "label": "No"
+        },        
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ],
+      "default": "no",
+      "label": "Make section slider?"
+    },    
     {
       "type": "range",
       "id": "products_to_show",
