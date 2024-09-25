@@ -129,12 +129,22 @@
         "layout": "row",
         "orientation": "normal"
       }
+    },
+    "fullwidth_multimedia_banner_GzEKkN": {
+      "type": "fullwidth-multimedia-banner",
+      "settings": {
+        "media_type": "video",
+        "banner_image_alt": "",
+        "banner_video": "shopify://files/videos/videoprom_3b2ea6f3-d617-44d8-bf01-38c2aadaeed1.mp4",
+        "video_poster": "shopify://shop_images/Captura_de_pantalla_2024-09-24_204803.png"
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "two_column_images_yD3xnC",
-    "two_column_image_content_xfrKPp"
+    "two_column_image_content_xfrKPp",
+    "fullwidth_multimedia_banner_GzEKkN"
   ]
 }
