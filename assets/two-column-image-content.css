@@ -60,12 +60,39 @@
     margin-bottom: 10px;
 }
 
-.description {
-    font-size: 1rem;
-}
-
 .image-column .large-image {
     width: 100%;
     height: 890px;
     object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .image-column .large-image {
+      height: 650px;
+    }
+    .content-column{
+        padding: 5px;
+    }
+    .content-column h2{
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .content-column h3{
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .content-column p{
+        font-size: 14px;
+      }    
+}
+
+@media (max-width: 768px) {
+   .two-column-layout.row{
+    flex-direction: column !important;
+   }
+   .custom-col{
+        width: 100%;
+        max-width: 100%; 
+        padding: 20px;   
+   }
 }

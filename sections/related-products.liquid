@@ -59,9 +59,9 @@
             {% endfor %}
           </ul>
         </div>    
-        {% unless section.settings.slider_type == 'no' %}   
+        {% if sliderSection %}   
           <button class="slider-btn next-btn" aria-label="Next Slide">›</button>
-        {% endunless %}
+        {% endif %}
       </div>
     {% endif %}
   </product-recommendations>
@@ -71,101 +71,10 @@
   {%- endif -%}
 </div>
 
-<style>
-  .slider-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .slider-container {
-    overflow: hidden;
-    scroll-behavior: smooth; 
-    width: 100%;
-  }
-  
-  .slider {
-    display: flex;
-    gap: 20px;
-    scroll-behavior: smooth;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .slider-item {
-    flex: 0 0 calc(100% / 4);
-    transition: transform 0.3s ease;    
-  }
-  
-  @media (max-width: 1024px) {
-    .slider-item {
-      flex: 0 0 calc(100% / 2); 
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .slider-item {
-      flex: 0 0 100%;
-    }
-  }
-  
-  .slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #262626;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 100;
-    font-size: 30px;
-    border-radius: 50%;
-    padding: 10px 20px;  
-  }
-  
-  .prev-btn {
-    left: -15px;
-  }
-  
-  .next-btn {
-    right: -15px;
-  }
-  
-</style>
+{% if sliderSection %}   
+  <script src="{{ 'custom-slider.js' | asset_url }}" defer="defer"></script>
+{%endif %}
 
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function() {
-
-    setTimeout(function(){
-        
-    const sliderContainer = document.querySelector('.slider-container');
-    const slider = document.querySelector('.slider');
-    const sliderItems = document.querySelectorAll('.slider-item');
-  
-    console.log(sliderItems)
-    if (sliderItems.length > 0) {
-      const itemWidth = sliderItems[0].offsetWidth; 
-  
-      const nextBtn = document.querySelector('.next-btn');
-      const prevBtn = document.querySelector('.prev-btn');
-  
-      nextBtn.addEventListener('click', function() {
-        sliderContainer.scrollLeft += itemWidth * 1.5; 
-      });
-  
-      prevBtn.addEventListener('click', function() {
-        sliderContainer.scrollLeft -= itemWidth * 1.5; 
-      });
-    } else {
-      console.error('No slider items found.');
-    }
-  }, 1000);
-    
-  });
-    
-</script>
 
 {% schema %}
 {
