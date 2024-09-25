@@ -1,0 +1,94 @@
+<section class="custom-columns {{ section.settings.layout_type }}">
+    <div class="container">
+      <div class="columns-wrapper">
+        {% for block in section.blocks %}
+          <div class="column-item">
+            {% if block.settings.icon_image != blank %}
+              <img 
+                src="{{ block.settings.icon_image | image_url }}" 
+                alt="{{ block.settings.title | escape }}" 
+                class="column-icon"
+                width="100%"
+                height="100%"                 
+                />
+            {% else %}
+                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.title %}
+              <h3 class="column-title">{{ block.settings.title }}</h3>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+  <link rel="stylesheet" href="{{ 'multicolumn-with-icon.css' | asset_url }}">
+
+  
+  {% schema %}
+  {
+    "name": "Custom Columns",
+    "settings": [
+      {
+        "type": "select",
+        "id": "layout_type",
+        "label": "Column Layout",
+        "options": [
+          {
+            "value": "row",
+            "label": "Row"
+          },
+          {
+            "value": "column",
+            "label": "Column"
+          }
+        ],
+        "default": "row"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "column",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon_image",
+            "label": "Icon Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Column Title"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Multicolumn with icon",
+        "category": "Custom",
+        "blocks": [
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          }
+        ]
+      }
+    ]
+  }
+  {% endschema %}
+  
