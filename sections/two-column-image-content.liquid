@@ -1,0 +1,137 @@
+{{ 'two-column-image-content.css' | asset_url | stylesheet_tag }}
+
+<div class="two-column-section">
+    <div class="two-column-layout 
+        {% if section.settings.layout == 'row' %}row{% else %}column{% endif %}
+        {% if section.settings.orientation == 'reverse' %}reverse{% endif %}
+    ">
+      
+      <div class="custom-col content-column">
+        {% if section.settings.icon_image != blank %}
+            <img 
+            src="{{ section.settings.icon_image | image_url }}" 
+            alt="{{ section.settings.icon_image_alt | escape }}" 
+            class="icon-image"
+            width="100%"
+            height="100%"            
+            >
+        {% else %}
+            {{ 'image' | placeholder_svg_tag }}                
+        {% endif %}
+
+        {% if section.settings.title != blank %}
+          <h2 class="custom-title">{{ section.settings.title }}</h2>
+        {% endif %}
+        
+        {% if section.settings.subtitle != blank %}
+          <h3 class="subtitle">{{ section.settings.subtitle }}</h3>
+        {% endif %}
+        
+        {% if section.settings.description != blank %}
+          <p class="description">{{ section.settings.description }}</p>
+        {% endif %}
+      </div>
+
+      <div class="custom-col image-column">
+        {% if section.settings.large_image != blank %}
+          <img 
+            src="{{ section.settings.large_image | image_url }}" 
+            alt="{{ section.settings.large_image_alt | escape }}" 
+            class="large-image"
+            width="750px"
+            height="890px"        
+        >
+        {% else %}
+          {{ 'image' | placeholder_svg_tag }}          
+        {% endif %}
+      </div>
+
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Two Column with Content",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "Icon Image"
+    },
+    {
+      "type": "text",
+      "id": "icon_image_alt",
+      "label": "Icon Image Alt Text",
+      "default": "Alt text for icon image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title "
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Subtitle"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "large_image",
+      "label": "Large Image"
+    },
+    {
+      "type": "text",
+      "id": "large_image_alt",
+      "label": "Large Image Alt Text",
+      "default": "Alt text for large image"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "row",
+      "options": [
+        {
+          "value": "row",
+          "label": "Row"
+        },
+        {
+          "value": "column",
+          "label": "Column"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "orientation",
+      "label": "Orientation",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "reverse",
+          "label": "Reverse"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Two Column Image with Content",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
