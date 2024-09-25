@@ -40,7 +40,7 @@
         {% if sliderSection %}   
           <button class="slider-btn prev-btn" aria-label="Previous Slide">‹</button>
         {% endif %}
-        <div class="{% if sliderSection %}slider-container {% endif %}">
+        <div class="{% if sliderSection %}slider-container{% endif %}">
             <ul
               class="{% if sliderSection %}slider {% else %} grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down {% endif %}"
               role="list"
