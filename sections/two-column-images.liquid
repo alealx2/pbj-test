@@ -14,7 +14,7 @@
           {{ 'image' | placeholder_svg_tag }}          
         {% endif %}
       </div>
-      <div class="custom-column">
+      <div class="custom-column {% if section.settings.layout == 'row' %}half{% endif %}">
         {% if section.settings.secondary_image != blank %}
             <img 
                 src="{{ section.settings.secondary_image | image_url }}" 
