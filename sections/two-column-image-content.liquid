@@ -1,3 +1,5 @@
+{{ 'two-column-image-content.css' | asset_url | stylesheet_tag }}
+
 <div class="two-column-section">
     <div class="two-column-layout 
         {% if section.settings.layout == 'row' %}row{% else %}column{% endif %}
@@ -46,8 +48,6 @@
 
     </div>
 </div>
-
-<link rel="stylesheet" href="{{ 'two-column-image-content.css' | asset_url }}">
 
 
 {% schema %}
