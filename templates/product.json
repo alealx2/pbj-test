@@ -144,13 +144,100 @@
       "settings": {
         "icon_image": "shopify://shop_images/Star_1.png",
         "icon_image_alt": "You look like a popstar",
-        "title": "Be a star be yourself",
-        "subtitle": "The craft of naturally dyed textile production and pesticide-free cotton cultivation goes back thousands of years, with strong roots in the Indian subcontinent. The origins of vegetable dyeing in India can be traced to the Indus Valley around the 4th millenium B.C. Thousands of years later, the synthesis of petroleum-based dyes proliferated in the 1870’s, bringing an end to widespread use of natural processes. Shortsightedly convenient and inexpensive GMO & pesticide heavy cotton, petroleum-based dyes, and exploited garment manufacturing labor, has largely replaced the sustainable craft of milled organic cotton, colored with natural dyes, cut and sewn into finished garments with integrity. This shift has spoiled the natural world for more than a century, causing drastic consequences to garment workers and our environment. Through the Clean Clothes project, we aim to create dialogue and research for two primary goals: 1) to respect and advocate for the usage of pesticide-free, non-GMO organic cotton; and 2) if dyeing is necessary, to use only 100% natural dyes. By issuing constraints on dyeing and washing processes, not only can we assure Clean Clothes on our skin, but cleaner rivers, oceans, soil, and air for everyone.",
+        "title": "Feel like a popstar",
+        "subtitle": "You can be the next one",
         "description": "The craft of naturally dyed textile production and pesticide-free cotton cultivation goes back thousands of years, with strong roots in the Indian subcontinent. The origins of vegetable dyeing in India can be traced to the Indus Valley around the 4th millenium B.C. Thousands of years later, the synthesis of petroleum-based dyes proliferated in the 1870’s, bringing an end to widespread use of natural processes. Shortsightedly convenient and inexpensive GMO & pesticide heavy cotton, petroleum-based dyes, and exploited garment manufacturing labor, has largely replaced the sustainable craft of milled organic cotton, colored with natural dyes, cut and sewn into finished garments with integrity. This shift has spoiled the natural world for more than a century, causing drastic consequences to garment workers and our environment. Through the Clean Clothes project, we aim to create dialogue and research for two primary goals: 1) to respect and advocate for the usage of pesticide-free, non-GMO organic cotton; and 2) if dyeing is necessary, to use only 100% natural dyes. By issuing constraints on dyeing and washing processes, not only can we assure Clean Clothes on our skin, but cleaner rivers, oceans, soil, and air for everyone.",
         "large_image": "shopify://shop_images/models_5_-min.jpg",
-        "large_image_alt": "Caps",
+        "large_image_alt": "Stylish boy",
         "layout": "row",
         "orientation": "reverse"
+      }
+    },
+    "two_column_image_content_gd6RBg": {
+      "type": "two-column-image-content",
+      "settings": {
+        "icon_image": "shopify://shop_images/money_1.png",
+        "icon_image_alt": "Bpart of our models",
+        "title": "Bpart of our models",
+        "subtitle": "Join the style",
+        "description": "The craft of naturally dyed textile production and pesticide-free cotton cultivation goes back thousands of years, with strong roots in the Indian subcontinent. The origins of vegetable dyeing in India can be traced to the Indus Valley around the 4th millenium B.C. Thousands of years later, the synthesis of petroleum-based dyes proliferated in the 1870’s, bringing an end to widespread use of natural processes. Shortsightedly convenient and inexpensive GMO & pesticide heavy cotton, petroleum-based dyes, and exploited garment manufacturing labor, has largely replaced the sustainable craft of milled organic cotton, colored with natural dyes, cut and sewn into finished garments with integrity. This shift has spoiled the natural world for more than a century, causing drastic consequences to garment workers and our environment. Through the Clean Clothes project, we aim to create dialogue and research for two primary goals: 1) to respect and advocate for the usage of pesticide-free, non-GMO organic cotton; and 2) if dyeing is necessary, to use only 100% natural dyes. By issuing constraints on dyeing and washing processes, not only can we assure Clean Clothes on our skin, but cleaner rivers, oceans, soil, and air for everyone.",
+        "large_image": "shopify://shop_images/models_3_-min.jpg",
+        "large_image_alt": "Girl Model",
+        "layout": "row",
+        "orientation": "normal"
+      }
+    },
+    "two_column_image_content_YmqRc4": {
+      "type": "two-column-image-content",
+      "settings": {
+        "icon_image": "shopify://shop_images/birthday_1.png",
+        "icon_image_alt": "Celebrate your outfits",
+        "title": "Celebrate your outfits",
+        "subtitle": "Today is the day",
+        "description": "The craft of naturally dyed textile production and pesticide-free cotton cultivation goes back thousands of years, with strong roots in the Indian subcontinent. The origins of vegetable dyeing in India can be traced to the Indus Valley around the 4th millenium B.C. Thousands of years later, the synthesis of petroleum-based dyes proliferated in the 1870’s, bringing an end to widespread use of natural processes. Shortsightedly convenient and inexpensive GMO & pesticide heavy cotton, petroleum-based dyes, and exploited garment manufacturing labor, has largely replaced the sustainable craft of milled organic cotton, colored with natural dyes, cut and sewn into finished garments with integrity. This shift has spoiled the natural world for more than a century, causing drastic consequences to garment workers and our environment. Through the Clean Clothes project, we aim to create dialogue and research for two primary goals: 1) to respect and advocate for the usage of pesticide-free, non-GMO organic cotton; and 2) if dyeing is necessary, to use only 100% natural dyes. By issuing constraints on dyeing and washing processes, not only can we assure Clean Clothes on our skin, but cleaner rivers, oceans, soil, and air for everyone.",
+        "large_image": "shopify://shop_images/models_1_-min.jpg",
+        "large_image_alt": "Brown Caps",
+        "layout": "row",
+        "orientation": "reverse"
+      }
+    },
+    "fullwidth_multimedia_banner_8QpwYk": {
+      "type": "fullwidth-multimedia-banner",
+      "settings": {
+        "media_type": "video",
+        "banner_image_alt": "",
+        "banner_video": "shopify://files/videos/Essentials Clothing Shoot ｜ Promotional Video.mp4",
+        "video_poster": "shopify://shop_images/Captura_de_pantalla_2024-09-24_200447.png"
+      }
+    },
+    "multicolumn_with_icon_6q3URD": {
+      "type": "multicolumn-with-icon",
+      "blocks": {
+        "column_J78hEY": {
+          "type": "column",
+          "settings": {
+            "icon_image": "shopify://shop_images/refer.png",
+            "title": "Re-invigorating, re-introducing local ancestral techniques, adapting to modern need."
+          }
+        },
+        "column_bUQ6iT": {
+          "type": "column",
+          "settings": {
+            "icon_image": "shopify://shop_images/Star_1.png",
+            "title": "From the ground to the finished product, made at the source of the raw materials."
+          }
+        },
+        "column_HfKkTf": {
+          "type": "column",
+          "settings": {
+            "icon_image": "shopify://shop_images/mail_list.png",
+            "title": "Organic, recycled or biodegradable materials and processes."
+          }
+        },
+        "column_q8Cfby": {
+          "type": "column",
+          "settings": {
+            "icon_image": "shopify://shop_images/social_1.png",
+            "title": "Worldwide team members and partners receive more than average wages and salaries."
+          }
+        },
+        "column_HUdgxX": {
+          "type": "column",
+          "settings": {
+            "icon_image": "shopify://shop_images/birthday_1.png",
+            "title": "No intermediaries or agents, every production is developed and monitored by IOAN."
+          }
+        }
+      },
+      "block_order": [
+        "column_J78hEY",
+        "column_bUQ6iT",
+        "column_HfKkTf",
+        "column_q8Cfby",
+        "column_HUdgxX"
+      ],
+      "settings": {
+        "layout_type": "row"
       }
     }
   },
@@ -160,6 +247,10 @@
     "two_column_images_yD3xnC",
     "two_column_image_content_xfrKPp",
     "fullwidth_multimedia_banner_GzEKkN",
-    "two_column_image_content_XUMdj6"
+    "two_column_image_content_XUMdj6",
+    "two_column_image_content_gd6RBg",
+    "two_column_image_content_YmqRc4",
+    "fullwidth_multimedia_banner_8QpwYk",
+    "multicolumn_with_icon_6q3URD"
   ]
 }
